@@ -78,13 +78,13 @@ namespace Infinite.WeekTest_18_
         protected global::System.Web.UI.WebControls.TextBox TxtBudgetedStrength;
 
         /// <summary>
-        /// RfvTxtBudgetedStrength control.
+        /// TxtBudgeted control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RfvTxtBudgetedStrength;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator TxtBudgeted;
 
         /// <summary>
         /// TxtCurrentStrength control.
@@ -96,13 +96,13 @@ namespace Infinite.WeekTest_18_
         protected global::System.Web.UI.WebControls.TextBox TxtCurrentStrength;
 
         /// <summary>
-        /// RfvTxtStrength control.
+        /// TxtCurrent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RfvTxtStrength;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator TxtCurrent;
 
         /// <summary>
         /// BtnAddNew control.
@@ -114,12 +114,12 @@ namespace Infinite.WeekTest_18_
         protected global::System.Web.UI.WebControls.Button BtnAddNew;
 
         /// <summary>
-        /// Button1 control.
+        /// BtnReset control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button BtnReset;
     }
 }

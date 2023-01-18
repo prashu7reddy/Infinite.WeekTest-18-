@@ -21,7 +21,7 @@ namespace Infinite.WeekTest_18_
 
         protected void BtnAddNew_Click(object sender, EventArgs e)
         {
-            using (conObj = new SqlConnection(ConfigurationManager.ConnectionStrings["vinayAcon"].ConnectionString))
+            using (conObj = new SqlConnection(ConfigurationManager.ConnectionStrings["HRCon"].ConnectionString))
             {
                 using (cmdObj = new SqlCommand("usp_PositionDetails", conObj))
                 {
@@ -29,21 +29,30 @@ namespace Infinite.WeekTest_18_
                     cmdObj.CommandType = CommandType.StoredProcedure;
                     cmdObj.Parameters.AddWithValue("@positionCode", TxtPositionCode.Text);
                     cmdObj.Parameters.AddWithValue("@Description", TxtDescription.Text);
-                    cmdObj.Parameters.AddWithValue("@BudgetedStrength", TxtBudgeted.Text); 
-                    cmdObj.Parameters.AddWithValue("@year", TxtYear.Text); 
+                    cmdObj.Parameters.AddWithValue("@BudgetedStrength", TxtBudgetedStrength.Text); 
+                    cmdObj.Parameters.AddWithValue("@year", DropDownList1.Text); 
                     cmdObj.Parameters.AddWithValue("@CurrentStrength", TxtCurrentStrength.Text);
-
                     if (conObj.State == ConnectionState.Closed)
                     {
                         conObj.Open();
                     }
-
-
-
                 }
             }
 
 
+        }
+        public void ResetControls()
+        {
+            TxtPositionCode.Text = "";
+            TxtDescription.Text = "";
+            TxtBudgetedStrength.Text = " ";
+            DropDownList1.Text = "";
+            TxtCurrentStrength.Text = "";
+        }
+
+        protected void BtnReset_Click(object sender, EventArgs e)
+        {
+            ResetControls();
         }
     }
 }

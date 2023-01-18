@@ -51,18 +51,18 @@
                         <div class="mb-2 row">
                             <label class="form-label col-md-4">Budgeted Strength</label>
                             <asp:TextBox ID="TxtBudgetedStrength" runat="server" CssClass="form-control" />
-                            <asp:RequiredFieldValidator SetFocusOnError="true" Display="Dynamic" ForeColor="Red" ID="RfvTxtBudgetedStrength" runat="server" ControlToValidate="TxtBudgetedStrength"
+                            <asp:RequiredFieldValidator SetFocusOnError="true" Display="Dynamic" ForeColor="Red" ID="TxtBudgeted" runat="server" ControlToValidate="TxtBudgetedStrength"
                                 ErrorMessage="please enter budgeted strength"></asp:RequiredFieldValidator>
                         </div>
                         <div class="mb-2 row">
                             <label class="form-label col-md-4">Current Strength</label>
                             <asp:TextBox ID="TxtCurrentStrength" runat="server" CssClass="form-control" />
-                            <asp:RequiredFieldValidator SetFocusOnError="true" Display="Dynamic" ForeColor="Red" ID="RfvTxtStrength" runat="server" ControlToValidate="TxtCurrentStrength" ErrorMessage="please enter current strength"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator SetFocusOnError="true" Display="Dynamic" ForeColor="Red" ID="TxtCurrent" runat="server" ControlToValidate="TxtCurrentStrength" ErrorMessage="please enter current strength"></asp:RequiredFieldValidator>
                         </div>
                         <div class="mb-2 row">
                             <div class="mb-1 col">
                                 <asp:Button Text="Add New" ID="BtnAddNew" runat="server" OnClick="BtnAddNew_Click" CssClass="btn btn-primary" />
-                                <asp:Button Text="Reset" ID="Button1" runat="server" CausesValidation="false" CssClass="btn btn-danger" />
+                                <asp:Button Text="Reset" ID="BtnReset" runat="server" CausesValidation="false" CssClass="btn btn-danger" onclick="BtnReset_Click"/>
                             </div>
 
                         </div>
@@ -70,10 +70,6 @@
                     </div>
             </div>
         </div>
-
-
-
-
     </form>
 </body>
 </html>
